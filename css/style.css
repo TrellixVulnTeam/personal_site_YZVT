@@ -9,10 +9,9 @@
   font-weight: bolder; }
 
 h1 {
-  background-image: url("../img/sky.jpg");
+  background: url("../img/sky.jpg");
   background-position: 50% 50%;
   background-size: cover;
-  background: url("../img/sky.jpg");
   font-family: 'overpass-xtrabold';
   font-size: 15em;
   grid-column-start: 1;
@@ -44,23 +43,24 @@ a {
   color: #eeeddd;
   font-size: 2em;
   text-decoration: none;
-  vertical-align: middle; }
+  vertical-align: middle;
+  position: relative; }
 
-a:hover {
-  color: #000000; }
+a:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 3px;
+  bottom: -0.1em;
+  left: 0;
+  padding-right: 0.1em;
+  background-color: #FFF;
+  visibility: hidden;
+  transition: all 0.5s cubic-bezier(0.75, 0.04, 0.27, 0.91); }
 
-.link-highlight {
-  background-image: linear-gradient(to right, transparent 50%, #eeeddd 50%);
-  background-size: 200% auto;
-  background-position: -0% 0;
-  transition: background-position 0.5s cubic-bezier(0.75, 0.04, 0.27, 0.91);
-  padding-left: 1em;
-  padding-right: 1em; }
-
-.link-highlight:hover {
-  background-position: -99.99% 0; }
-  .link-highlight:hover a {
-    color: #000000; }
+a:hover:before {
+  visibility: visible;
+  width: 100%; }
 
 .contact-me {
   grid-row-start: 4;

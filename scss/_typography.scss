@@ -12,14 +12,24 @@
 }
 
 h1 {
-    font-family: 'overpass-xtrabold';
-    color: $white;
+    background-image: url("../img/sky.jpg");
+    background-position: 50% 50%;
+    background-size: cover;
+    background: url("../img/sky.jpg");
+    font-family: 'overpass-xtrabold';    
     font-size: 15em;
     grid-column-start: 1;
     grid-column-end: 4;
     grid-row-start: 1;
     grid-row-end: 3;
     justify-self: center;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 0.65em;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    color: transparent;
+    
 }
 
 h3 {
@@ -40,16 +50,46 @@ a {
     color:$white;
     font-size: 2em;
     text-decoration: none;
-   
+    vertical-align: middle;
+
+    
+}
+
+a:hover {
+    
+    color: #000000;
+}
+
+.link-highlight {
+    background-image: linear-gradient(to right, transparent 50%, $white 50%);   
+    background-size: 200% auto;
+    background-position: -0% 0;
+    transition: background-position .5s cubic-bezier(.75,.04,.27,.91);;
+    padding-left: 1em;
+    padding-right: 1em;
+    
+
+}
+
+.link-highlight:hover {
+    background-position: -99.99% 0;
+
+    a {
+        color: #000000;
+    }
 }
 
 .contact-me {
-    font-size: 1.5em;
     grid-row-start: 4;
     grid-row-end: 5;
     justify-self: start;
     align-self: end;
-    padding: 1.5em;
+    margin-left: 4em;
+    margin-right: 1em;
+    margin-bottom: 2em;
+    a {
+        font-size: 1.5em;
+    }
 }
 
 path {
@@ -61,17 +101,11 @@ span {
     margin-left: auto;
     margin-right: auto;
     display: block;    
-    padding-top: 0.2em;
-    padding-bottom: 0.3em;
+    padding-top: 0.5em;
+    padding-bottom: 0.2em;
+    
 }
 
-.path-sc {    
-    transform: scale(1.25, 1.25);
-}
-
-.path-twt {
-    transform: scale(0.25, 0.25);
-}
 
 .soundcloud {
     position: relative;

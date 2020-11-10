@@ -16,9 +16,18 @@ body {
     grid-column-end: 4;
     grid-row-start: 1;
     grid-row-end: 5;
-    position: absolute;
     mix-blend-mode: overlay;
-    background-image: url("../img/AU_FG_Texture-2.jpg");
+    position: absolute;
+    background-image: url("../img/AU_FG_Texture-1.jpg");
+    background-repeat: repeat-y;
+    transform: scale(1.25);
+    animation: animatedBackground 0.7s steps(3) infinite;
+}
+
+@keyframes animatedBackground {
+    0% { background-position: 240% -34%; }
+    50% { background-position: 170% 400%; }
+	100% { background-position: -200% 25%; }
 }
 
 .base-container {

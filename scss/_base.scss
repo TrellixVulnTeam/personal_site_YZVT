@@ -1,0 +1,51 @@
+@use 'variables';
+
+html, body {margin: 0; height: 100%; overflow: hidden}
+
+body {
+    background-color: $black;
+    
+}
+
+.bg-image {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 5;
+    position: absolute;
+    mix-blend-mode: overlay;
+    background-image: url("../img/AU_FG_Texture-2.jpg");
+}
+
+.base-container {
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    position: relative;
+    z-index: 100;
+    grid-template-columns: repeat(3, 33.33%);
+    grid-template-rows: repeat(4, 25%);
+    
+}
+
+.link-container {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 5;    
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.link-block {
+    display: block;
+}
+

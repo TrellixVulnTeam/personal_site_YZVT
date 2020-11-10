@@ -1,0 +1,132 @@
+@use 'variables';
+@font-face {
+  font-family: 'overpass-regular';
+  src: url("../fonts/Overpass-Regular.ttf"); }
+
+@font-face {
+  font-family: 'overpass-xtrabold';
+  src: url("../fonts/Overpass-ExtraBold.ttf");
+  font-weight: bolder; }
+
+h1 {
+  font-family: 'overpass-xtrabold';
+  color: #eeeeee;
+  font-size: 15em;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  justify-self: center; }
+
+h3 {
+  font-family: 'overpass-regular';
+  color: #eeeeee;
+  font-size: 1.5em;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  justify-self: center;
+  align-self: end;
+  font-weight: normal; }
+
+a {
+  font-family: 'overpass-regular';
+  color: #eeeeee;
+  font-size: 2em;
+  text-decoration: none; }
+
+.contact-me {
+  font-size: 1.5em;
+  grid-row-start: 4;
+  grid-row-end: 5;
+  justify-self: start;
+  align-self: end;
+  padding: 1.5em; }
+
+path {
+  fill: #eeeeee; }
+
+span {
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  padding-top: 0.2em;
+  padding-bottom: 0.3em; }
+
+.path-sc {
+  transform: scale(1.25, 1.25); }
+
+.path-twt {
+  transform: scale(0.25, 0.25); }
+
+.soundcloud {
+  position: relative;
+  top: 0.1em; }
+
+.twitter {
+  position: relative;
+  padding-right: 0.45em;
+  left: 0.17em; }
+
+.instagram {
+  position: relative;
+  padding-right: 0.59em;
+  left: 0.23em; }
+
+.linkedin {
+  position: relative;
+  padding-right: 0.59em;
+  left: 0.23em; }
+
+.github {
+  position: relative;
+  padding-right: 0.46em;
+  left: 0.2em; }
+
+@use 'variables';
+html, body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden; }
+
+body {
+  background-color: #333333; }
+
+.bg-image {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 5;
+  position: absolute;
+  mix-blend-mode: overlay;
+  background-image: url("../img/AU_FG_Texture-2.jpg"); }
+
+.base-container {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  position: relative;
+  z-index: 100;
+  grid-template-columns: repeat(3, 33.33%);
+  grid-template-rows: repeat(4, 25%); }
+
+.link-container {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 5;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto; }
+
+.link-block {
+  display: block; }

@@ -2,6 +2,7 @@
  
  My personal landing site.
  
- use npm run sass to compile to sass.
+ requires sass to be installed globally.
+ use `<npm run sass>` to compile to sass.
  
  open index.html to open the site
